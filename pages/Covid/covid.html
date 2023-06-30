@@ -3,9 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COVID-QUESTIONARY</title>
+    <link rel="stylesheet" href="/common.css" />
+    <link rel="stylesheet" href="./covid.css" />
+    <title>COVID-QUESTIONNAIRE</title>
   </head>
   <body>
-    <h1>cooooviddd</h1>
+    <main>
+      <header>
+        <div class="header-top">
+          <img src="/assets/title.png" alt="company title" />
+          <span>2/4</span>
+        </div>
+        <hr />
+      </header>
+      <section class="content">
+        <form>
+          <h2>გაქვს გადატანილი Covid-19?*</h2>
+          <div class="input-box">
+            <input type="radio" name="covid_status" id="covid_yes" />
+            <label for="covid_yes">კი</label>
+          </div>
+
+          <div class="input-box">
+            <input type="radio" name="covid_status" id="covid_no" />
+            <label for="covid_no">არა</label>
+          </div>
+
+          <div class="input-box">
+            <input type="radio" name="covid_status" id="covid_now" />
+            <label for="covid_now">ახლა მაქვს</label>
+          </div>
+
+          <h2 class="test-question">ანტისხეულების ტესტი გაქვს გაკეთებული?*</h2>
+          <div class="input-box test-box">
+            <input type="radio" name="test_status" id="test_yes" />
+            <label for="test_yes">კი</label>
+          </div>
+
+          <div class="input-box test-box">
+            <input type="radio" name="test_status" id="test_no" />
+            <label for="test_no">არა</label>
+          </div>
+        </form>
+        <img src="/assets/temperature.png" alt="man" class="info-img" />
+      </section>
+
+      <div class="butoons">
+        <button class="next-btn" onclick="onNextPage()">
+          <svg
+            width="18"
+            height="23"
+            viewBox="0 0 18 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L15 11.3158L1 21.6316"
+              stroke="#232323"
+              stroke-width="2.4"
+            />
+          </svg>
+        </button>
+      </div>
+    </main>
+    <script src="./covid.js"></script>
   </body>
 </html>
