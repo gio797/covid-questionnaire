@@ -56,6 +56,8 @@ form hr {
 .buttons {
   margin: 0 auto;
   margin-top: 56px;
+  display: flex;
+  gap: 117px;
 }
 
 .input-box {

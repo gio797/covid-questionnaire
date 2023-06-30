@@ -12,6 +12,9 @@ const amount = document.querySelector("#amount");
 const test_question = document.querySelector(".test-question");
 const test_boxes = document.querySelectorAll(".test-box");
 
+const covid_date_title = document.querySelector(".covid-date");
+const covid_date = document.querySelector("#covid-date");
+
 covid_yes.addEventListener("input", () => {
   test_question.classList.add("active");
   test_boxes.forEach((box) => box.classList.add("active"));
@@ -31,4 +34,24 @@ test_yes.addEventListener("input", () => {
   test_amount_title.classList.add("active");
   test_date.classList.add("active");
   amount.classList.add("active");
+
+  covid_date_title.classList.remove("active");
+  covid_date.classList.remove("active");
 });
+
+test_no.addEventListener("input", () => {
+  covid_date_title.classList.add("active");
+  covid_date.classList.add("active");
+
+  test_amount_title.classList.remove("active");
+  test_date.classList.remove("active");
+  amount.classList.remove("active");
+});
+
+function onPreviousPage() {
+  document.location.href = "../Personal/personal.html";
+}
+
+function onNextPage() {
+  document.location.href = "../Vaccine/vaccine.html";
+}
