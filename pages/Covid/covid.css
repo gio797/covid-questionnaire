@@ -1,42 +1,8 @@
-main {
-  width: 100%;
-  height: 100%;
-  padding: 90px 196px 104px 200px;
-  display: flex;
-  flex-direction: column;
-}
-
-header,
-.header-top {
-  width: 100%;
-}
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-top span {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 40px;
-  color: var(--darkText);
-}
-
-header hr {
-  border: 1.8px solid var(--darkText);
-  margin-top: 15px;
-}
-
-.content {
-  display: flex;
-}
-
 form {
   display: flex;
   flex-direction: column;
   margin-top: 42px;
+  min-width: 600px;
 }
 
 form h2 {
@@ -54,10 +20,9 @@ form hr {
 }
 
 .info-img {
-  margin-left: 138px;
-  margin-top: -50px;
-  width: 949px;
-  height: 892px;
+  margin-left: 100px;
+  margin-top: -23px;
+  width: 850px;
 }
 
 .warning {
@@ -89,6 +54,7 @@ form hr {
 }
 
 .buttons {
+  margin: 0 auto;
   margin-top: 56px;
 }
 
@@ -115,4 +81,40 @@ form hr {
 
 .test-box.active {
   display: flex;
+}
+
+form input[type="text"] {
+  margin-top: 8px;
+  width: 513px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.73px;
+  color: var(--darkText);
+  outline: none;
+  border: 0.8px solid var(--darkText);
+  background-color: transparent;
+  padding: 11px 20px 9px 20px;
+  margin-left: 20px;
+  display: none;
+}
+
+.test-amount-title {
+  display: none;
+}
+
+.test-amount-title.active {
+  display: block;
+}
+
+form input[type="text"].active {
+  display: block;
+}
+
+.covid-date {
+  display: none;
+}
+
+.covid-date.active {
+  display: block;
 }

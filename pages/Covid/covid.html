@@ -44,11 +44,38 @@
             <input type="radio" name="test_status" id="test_no" />
             <label for="test_no">არა</label>
           </div>
+
+          <h2 class="test-amount-title">
+            თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და ანტისხეულების
+            რაოდენობა*
+          </h2>
+          <input
+            type="text"
+            name="test_date"
+            id="test_date"
+            placeholder="რიცხვი"
+          />
+          <input
+            type="text"
+            name="amount"
+            id="amount"
+            placeholder="ანტისხეულების რაოდენობა"
+          />
+
+          <h2 class="covid-date">
+            მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*
+          </h2>
+          <input
+            type="text"
+            name="covid-date"
+            id="covid_date"
+            placeholder="დდ/თთ/წწ"
+          />
         </form>
         <img src="/assets/temperature.png" alt="man" class="info-img" />
       </section>
 
-      <div class="butoons">
+      <div class="buttons">
         <button class="next-btn" onclick="onNextPage()">
           <svg
             width="18"
