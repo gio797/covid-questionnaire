@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 101px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.start-btn {
+  color: var(--darkText);
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 36px;
+  text-align: center;
+}
+
+.start-btn:hover {
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+}
