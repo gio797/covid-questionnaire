@@ -29,5 +29,11 @@ if (localData) {
 export const updateUser = (property, value) => {
   user[property] = value;
   localStorage.setItem("user", JSON.stringify(user));
-  console.log(user);
+  //   console.log(user);
+};
+
+export const updateUserAntibodies = (property, value) => {
+  user.antibodies[property] = value;
+  localStorage.setItem("user", JSON.stringify(user));
+  //   console.log(user);
 };
