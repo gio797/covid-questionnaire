@@ -1,3 +1,5 @@
+import { isLocal, updateUser, user } from "../../main.js";
+
 const nameError = document.querySelector("#name-error");
 const surnameError = document.querySelector("#surname-error");
 const emailError = document.querySelector("#email-error");
@@ -7,6 +9,12 @@ const surnameInput = document.querySelector("#surname");
 const emailInput = document.querySelector("#email");
 
 let trySubmit = false;
+
+if (isLocal) {
+  nameInput.value = user.first_name;
+  surnameInput.value = user.last_name;
+  emailInput.value = user.email;
+}
 
 const nameCheckFunc = () => {
   if (nameInput.value.trim() === "") {
@@ -55,24 +63,30 @@ const emailCheckFunc = () => {
 };
 
 nameInput.addEventListener("input", () => {
+  updateUser("first_name", nameInput.value);
   if (trySubmit) {
     nameCheckFunc();
   }
 });
 
 surnameInput.addEventListener("input", () => {
+  updateUser("last_name", surnameInput.value);
   if (trySubmit) {
     surnameCheckFunc();
   }
 });
 
 emailInput.addEventListener("input", () => {
+  updateUser("email", emailInput.value);
   if (trySubmit) {
     emailCheckFunc();
   }
 });
 
-function onNextPage() {
+// could catch the button from html, with geteElementById and add addevent listener
+// with onNextPage function, instead we use window.object
+
+window.onNextPage = () => {
   if (!trySubmit) {
     trySubmit = true;
   }
@@ -83,4 +97,4 @@ function onNextPage() {
   if (nameStatus && surnameStatus && emailStatus) {
     document.location.href = "../Covid/covid.html";
   }
-}
+};
